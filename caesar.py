@@ -8,15 +8,15 @@ def rotate_character(text, rot):
         if char in lst_lower:
             num_char = alphabet_position(char)
             num_char += rot
-            if num_char > 25:
-                num_char = num_char % 25
+            if num_char >= 26:
+                num_char = num_char % 26
             char_new = lst_lower[num_char]
             text_new += char_new
         elif char in lst_upper:
             num_char = alphabet_position(char)
             num_char += rot
-            if num_char > 25:
-                num_char = num_char % 25
+            if num_char >= 26:
+                num_char = num_char % 26
             char_new = lst_upper[num_char]
             text_new += char_new
         else:
